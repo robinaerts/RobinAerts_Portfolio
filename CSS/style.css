@@ -119,20 +119,19 @@ section#hero {
 }
 
 
-section#hero:after {
-    content: "";
+#wave-bg {
     position: absolute;
-    background: url("/images/wave.svg") no-repeat;
-    bottom: -20rem;
+    bottom: 0;
+    background: url("/images/wave.svg") center center/cover;
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     z-index: -1;
 }
 
 #main-title {
     color: #123B7A;
     font-size: 4rem;
-    margin: 2rem 0 0 2.8rem
+    margin: 2rem 0 0 2.8rem;
 }
 
 #main-description {
@@ -142,6 +141,7 @@ section#hero:after {
 
 #main-container-videoandcto {
     width: 100vw;
+    height: 70vh;
     margin-top: 3rem;
     display: flex;
     justify-content: space-between;
@@ -151,6 +151,7 @@ section#hero:after {
 #main-video {
     margin-left: 2.8rem;
     width: 40%;
+    height: 60%;
 }
 
 .cto {
@@ -181,7 +182,7 @@ section#hero:after {
 #projecten {
     margin-top: 10rem;
     width: 100vw;
-    height: 160vh;
+    /* height: 100%; */
     position: relative;
 }
 
@@ -197,18 +198,14 @@ section#hero:after {
     justify-content: center;    
 } 
 
-/* ::-webkit-scrollbar {
-    display: none;
-} */
-
 .all-project-container {
     display: flex ;
     flex-wrap: wrap;
     width: 100%;
     grid-template-columns: auto auto auto auto;
     justify-content: center;
-    position: absolute;
-    top: 200px;
+    /* position: absolute;
+    top: 200px; */
 
 }
 
@@ -309,9 +306,9 @@ section#hero:after {
 /* About */
 
 #about {
-    height: 160vh;
+    /* height: 160vh; */
     width: 100vw;
-    margin-top: 6rem;
+    margin-top: 10rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -321,16 +318,16 @@ section#hero:after {
 .first-container {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
     flex-wrap: wrap;
-    
 }
 
 .me {
     background-color: #F8F8F8;
     width: 875px;
-    height: 345px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    margin-right: 1rem;
+    padding-bottom: 1.5rem;
 }
 
 #profile-image {
@@ -382,9 +379,8 @@ section#hero:after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 3rem;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-
+    margin-left: 2rem;
 }
 
 #title-coop {
@@ -414,7 +410,7 @@ section#hero:after {
 
 .background {
     width: 100vw;
-    height: 70vh;
+    height: 40%;
     z-index: -100;
     position: absolute;
     bottom: 0;
@@ -449,7 +445,7 @@ section#hero:after {
 
 .skill {
     opacity: 0;
-    transform: translateY(-10vh);
+    transform: translateY(-15vh);
     visibility: hidden;
     transition: opacity 0.6s ease-out, transform 1.2s ease-out;
     will-change: opacity, visibility;
@@ -496,16 +492,18 @@ section#hero:after {
 
 #contact{
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .contact-container{
-    height: 65vh;
+    /* height: 65vh; */
     width: 100vw;
     margin-top: 4rem;
+    margin-bottom: 4rem;
     display: flex;
+    align-items: center;
 }
 
 .contact-container > form{
@@ -713,29 +711,9 @@ i.fab:hover {
     text-align: center;
 }
 
-
-@media screen and (max-width: 1407px) {
-    #about {
-        height: 250vh;
-    }
-    .background {
-        height: 150vh;
-    }
-}
-
-@media screen and (max-width: 1324px) {
-    .background {
-        height: 150vh;
-    }
-    #about {
-        height: 300vh;
-    }
-}
-
-@media screen and (max-width: 1274px) {
+@media screen and (max-width: 1322px) {
     #cooperation {
-        margin-top: 3rem;
-        margin-right: 0;
+        margin: 3rem 0 0 0;
     }
 }
 
@@ -746,18 +724,13 @@ i.fab:hover {
     }
 }
 
-@media screen and (max-width: 1054px) {
-    #projecten {
-        height: 230vh;
-    }
-}
 
 @media screen and (max-width: 944px) {
-    #about {
-        height: 390vh;
+    .bubbel {
+        display: none;
     }
-    .background {
-        height: 240vh;
+    #wave-bg {
+        display: none;
     }
     #title-linebreak {
         display: none;
@@ -767,19 +740,19 @@ i.fab:hover {
         align-items: center;
     }
     #main-video {
+        margin: 0;
         width: 80%;
         height: 50vh;
     }
-    section#hero {
-        height: 145vh;
-    }
     #main-title {
         text-align: center;
-        margin-left: 0;
+        margin: 2rem 0 0 0;
+        font-size: 3rem;
     }
     #main-description {
         text-align: center;
-        margin-left: 0;
+        margin: 2rem 0 0 0;
+        font-size: 1.5rem;
     }
     .cto {
         width: 100%;
@@ -787,13 +760,19 @@ i.fab:hover {
     #contact-bubbles-container {
         display: none;
     }
+    .me {
+        margin: 2rem;
+    }
 }
 
 @media screen and (max-width: 874px) {
     .watermark-title {
         font-size: 4rem;
-        margin-top: 0rem;
+        margin-top: 5%;
         white-space: nowrap;
+    }
+    .my-work-title {
+        margin-top: 20%;
     }
     .all-project-container {
         top: 80px;
@@ -815,9 +794,6 @@ i.fab:hover {
     }
     .container-input {
         flex-direction: column;
-    }
-    #contact {
-        height: 130vh;
     }
     .social-media {
         flex-direction: row;
@@ -845,14 +821,12 @@ i.fab:hover {
     #nav-home {
         display: none;
     }
-    section#hero {
-        height: 160vh;
-    }
+
+
 }
 
 @media screen and (max-width: 704px) {
     #projecten {
-        height: 430vh;
         margin-top: 0;
     }
     .about-linebreak {
@@ -866,6 +840,7 @@ i.fab:hover {
     }
     #me-text-paragraph {
         text-align: center;
+        margin-right: 3rem;
     }
 
 }
