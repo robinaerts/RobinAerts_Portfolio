@@ -112,7 +112,6 @@ a {
 /* Section 1: Hero */ 
 
 section#hero {
-    height: 95vh;
     width: 100vw;
     position: relative;
     top: 5rem;
@@ -404,13 +403,13 @@ section#hero {
     justify-content: space-around;
     margin-top: 10rem;
     margin-left: 1rem;
-    display: relative;
+    position: relative;
     z-index: 100;
 }
 
 .background {
     width: 100vw;
-    height: 40%;
+    height: 80%;
     z-index: -100;
     position: absolute;
     bottom: 0;
@@ -711,6 +710,15 @@ i.fab:hover {
     text-align: center;
 }
 
+@media screen and (max-width: 1407px) {
+ .skill {
+    transform: translateY(-5vh);
+    visibility: hidden;
+    transition: opacity 0.3s ease-out, transform 0.5s ease-out;
+    will-change: opacity, visibility;
+ }
+}
+
 @media screen and (max-width: 1322px) {
     #cooperation {
         margin: 3rem 0 0 0;
@@ -833,6 +841,7 @@ i.fab:hover {
         display: none;
     }
     #me-header {
+        flex-direction: column;
         justify-content: center;
     }
     #me-text-title {
@@ -840,7 +849,26 @@ i.fab:hover {
     }
     #me-text-paragraph {
         text-align: center;
-        margin-right: 3rem;
+        padding: 0 25px;
     }
+    #profile-image {
+        margin: 2rem 0 0 1rem;
+    }
+    #me-header-text {
+        margin: 1.3rem 0 0 0;
+        text-align: center;
+    }
+    #me-text {
+        margin: 1.2rem 0;
+    }
+    .nav-item {
+        padding: 2rem 1rem;
+    }
+}
 
+@media screen and (max-width: 400px) {
+    .my-work-title {
+        font-size: 3rem;
+        margin-top: 9rem;
+    }
 }
