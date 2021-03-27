@@ -476,6 +476,7 @@ section#hero {
 #skill-item-img {
     border-radius: 0;
     width: 40px;
+    height: 40px;
     display: inline;
     margin: 0 8rem 0 1rem;
 }
